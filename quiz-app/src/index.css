@@ -125,3 +125,55 @@ body {
 .next-question-btn:hover {
   background-color: hsl(0, 0%, 80%);
 }
+
+/* End screen styles */
+
+.end-screen-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border: 3px solid black;
+  border-radius: 8px;
+  text-align: center;
+  width: 800px;
+  padding: 20px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.end-screen-title {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.end-screen-txt {
+  font-size: 1.3rem;
+}
+
+.result {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.play-again-txt {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.restart-btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  width: 300px;
+  transition: background-color 0.3s ease;
+}
+
+.restart-btn:hover {
+  background-color: hsl(210, 100%, 46%);
+}
