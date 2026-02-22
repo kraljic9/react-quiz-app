@@ -38,7 +38,7 @@ function Question({ questionObj }) {
   return (
     <>
       {questions[currentQuestionIndex] ? (
-        <>
+        <div className="question-container">
           <h1>{questionObj.question}</h1>
 
           <div className="answers">
@@ -50,7 +50,7 @@ function Question({ questionObj }) {
 
             <button onClick={nextQuestion}>Next Question</button>
           </div>
-        </>
+        </div>
       ) : (
         <>
           <h1>
