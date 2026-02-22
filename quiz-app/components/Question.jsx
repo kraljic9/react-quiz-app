@@ -60,13 +60,15 @@ function Question({ questionObj }) {
           </button>
         </div>
       ) : (
-        <>
-          <h1>
+        <div className="game-over-container">
+          <h1 className="game-over-text">
             The game is over, if you wish to play again click the reset button
           </h1>
 
-          <button onClick={restart}>Reset</button>
-        </>
+          <button onClick={restart} className="restart-btn">
+            Reset
+          </button>
+        </div>
       )}
     </>
   );
