@@ -39,17 +39,25 @@ function Question({ questionObj }) {
     <>
       {questions[currentQuestionIndex] ? (
         <div className="question-container">
-          <h1>{questionObj.question}</h1>
+          <h1 className="question">
+            {currentQuestionIndex + 1}. {questionObj.question}
+          </h1>
 
           <div className="answers">
             {questionObj.answers.map((answer, index) => (
               <div className="answer-wrap" key={answer}>
-                <button onClick={() => setAnswerIndex(index)}>{answer}</button>
+                <button
+                  onClick={() => setAnswerIndex(index)}
+                  className="answer-btn"
+                >
+                  {answer}
+                </button>
               </div>
             ))}
-
-            <button onClick={nextQuestion}>Next Question</button>
           </div>
+          <button onClick={nextQuestion} className="next-question-btn">
+            Next Question
+          </button>
         </div>
       ) : (
         <>
