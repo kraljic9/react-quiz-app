@@ -6,11 +6,7 @@ import Question from "../components/Question";
 function Quiz() {
   const { currentQuestionIndex } = useContext(QuizContext);
 
-  return (
-    <div className="quiz-container">
-      {<Question questionObj={questions[currentQuestionIndex]} />}
-    </div>
-  );
+  return <>{<Question questionObj={questions[currentQuestionIndex]} />}</>;
 }
 
 export default Quiz;
