@@ -18,18 +18,23 @@ function EndScreen() {
 
   return (
     <div className="end-screen-container">
-      <div className="end-scree-text-container">
-        <h1>Quiz completed</h1>
+      <div className="end-screen-text-container">
+        <h1 className="end-screen-title">Quiz completed</h1>
 
-        <p>
-          Congratulations you answered {points}/{questions.length} questions
-          correctly!
+        <p className="end-screen-txt">
+          Congratulations you answered{" "}
+          <span className="result">
+            {points}/{questions.length}
+          </span>{" "}
+          questions correctly!
         </p>
       </div>
 
       <div className="play-again-container">
-        <p>Would you like to play again?</p>
-        <button onClick={restart}>Restart</button>
+        <p className="play-again-txt">Would you like to play again?</p>
+        <button onClick={restart} className="restart-btn">
+          Restart
+        </button>
       </div>
     </div>
   );
