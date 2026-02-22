@@ -32,7 +32,7 @@ function EndScreen() {
 
       <div className="play-again-container">
         <p className="play-again-txt">Would you like to play again?</p>
-        <button onClick={restart} className="restart-btn">
+        <button onClick={restart} className="restart-game-btn">
           Restart
         </button>
       </div>
