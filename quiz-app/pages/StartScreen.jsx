@@ -17,10 +17,19 @@ function StartScreen() {
   return (
     <div className="start-screen-container">
       <h1 className="start-screen-title">Welcome to the Quiz App!</h1>
-      <p>Test your knowledge, click the button to start the quiz</p>
-      <p>{msg}</p>
-      <button onClick={startQuiz}>Start</button>
-      <button onClick={displayMsg}>No</button>
+      <p className="start-screen-txt">
+        Test your knowledge, click the button to start the quiz
+      </p>
+      <p className="no-message">{msg}</p>
+
+      <div className="start-screen-btns">
+        <button onClick={startQuiz} className="start-screen-btn start-btn">
+          Start
+        </button>
+        <button onClick={displayMsg} className="start-screen-btn no-btn">
+          No
+        </button>
+      </div>
     </div>
   );
 }
