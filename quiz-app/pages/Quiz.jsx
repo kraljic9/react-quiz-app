@@ -1,7 +1,14 @@
+import { useContext } from "react";
+import { QuizContext } from "../context/QuizContext";
+import { questions } from "../data/Questions";
+import Question from "../components/Question";
+
 function Quiz() {
+  const { currentQuestionIndex } = useContext(QuizContext);
+
   return (
     <div className="quiz-container">
-      <h1>Place holder</h1>
+      {<Question questionObj={questions[currentQuestionIndex]} />}
     </div>
   );
 }
