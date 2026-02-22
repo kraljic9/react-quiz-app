@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { QuizContext } from "./QuizContext";
 
-function ContextProvider() {
+function ContextProvider({ children }) {
   // State for points, for answerIndex, current question
 
   const [points, setPoints] = useState(0);
@@ -19,7 +19,9 @@ function ContextProvider() {
           currentQuestionIndex,
           setCurrentQuestionIndex,
         }}
-      ></QuizContext.Provider>
+      >
+        {children}
+      </QuizContext.Provider>
     </>
   );
 }
